@@ -808,18 +808,22 @@ body {
     
     /* Correções dos Ícones Flutuantes no Celular */
     .floating-icon {
-        width: 35px;
-        opacity: 0.15;
-        z-index: 0;
+        width: 35px !important;
+        opacity: 0.15 !important;
+        z-index: 0 !important;
     }
     
     /* Correções do Modal no Celular */
-    .modal-info h3 { font-size: 1.6rem; word-break: break-word; line-height: 1.2; margin-bottom: 10px; }
+    .modal-info h3 { font-size: 1.6rem !important; word-break: break-word; line-height: 1.2; margin-bottom: 10px; }
     .modal-info p { font-size: 0.95rem; line-height: 1.4; }
-    .modal-content { max-height: 50vh; border-width: 4px; } /* Imagem um pouco menor para caber texto e setas */
-    .modal-video-container video { max-height: 50vh; }
-    .close-modal { top: 10px; right: 15px; font-size: 40px; }
+    .modal-content { max-height: 45vh !important; border-width: 4px; }
+    .modal-video-container video { max-height: 45vh !important; }
+    .close-modal { top: 10px !important; right: 15px !important; font-size: 40px !important; }
     .footer-social { flex-direction: column; gap: 1rem; align-items: center; }
+    
+    /* Morte absoluta do cursor no celular */
+    .custom-cursor { display: none !important; }
+    *, body, a, button, .portfolio-item, .filter-btn, .close-modal, .play-overlay { cursor: auto !important; }
 }
 
 /* ==== Option 5: Custom Cursor ==== */
