@@ -111,6 +111,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 currentSlides = JSON.parse(item.getAttribute('data-slides'));
                 currentSlideIndex = 0;
                 
+                // Pré-carregamento dos slides (Preload) para não ter delay no celular
+                currentSlides.forEach(src => {
+                    const img = new Image();
+                    img.src = src;
+                });
+                
                 // HTML comentado preparado para iframe futuro
                 // <!-- <div class="iframe-container"><iframe src="LINK_AQUI" width="100%" height="100%" frameborder="0" allowfullscreen></iframe></div> -->
                 
